@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/misFunciones.js"></script>  
+    <title>Cabins</title>
+    <link rel="stylesheet" href="css/main.css">
+
+<body>
+    <header>
+
+    </header>
+    <h1>Bienvenidos!!</h1>
+    <h2>Categorias</h2>
+    <div id="resultadoCategorias"></div>
+    <script type="text/javascript">
+        window.onload = autoInicioCategoria();
+    </script>
+    <div>
+        <input type="text" id="nameCategory" placeholder="nombre">
+        <input type="text" id="descriptionCategory" placeholder="descripcion">
+
+    </div>
+
+    <button onclick="guardarInfoCategoria()">Guardar Categorias</button>
+
+<!--Tabla Cabins-->
+    <h2>Cabañas</h2>
+    <div id="resultadoCabins"></div>
+    <script type="text/javascript">
+        window.onload = autoInicioCabin();
+    </script>
+    <div>
+        <input type="text" id="nameCabin" placeholder="name">
+        <input type="text" id="brandCabin" placeholder="brand">
+        <input type="number" id="roomsCabin" placeholder="rooms">
+        <input type="text" id="descriptionCabin" placeholder="descripcion">
+        <select id="select-category"></select>
+
+    </div>
+
+    <button onclick="guardarInfoCabin()">Guardar Cabaña</button>
+
+<!--Tabla Clientes-->
+<h2>Clientes</h2>
+    <div id="resultadoClientes"></div>
+    <script type="text/javascript">
+        window.onload = autoInicioCliente();
+    </script>
+    <div>
+        <input type="text" id="email" placeholder="email">
+        <input type="text" id="passwordClient" placeholder="password">
+        <input type="text" id="nameClient" placeholder="name">
+        <input type="number" id="ageClient" placeholder="age">
+    </div>
+    <button onclick="guardarInfoCliente()">Guardar Cliente</button>
+
+<!--Tabla Mensajes-->
+<h2>Mensajes</h2>
+    <div id="resultadoMensajes"></div>
+    <script type="text/javascript">
+        window.onload = autoInicioMensaje();
+    </script>
+    <div>
+        <input type="text" id="messageText" placeholder="message">
+        <select id="select-cabin"></select>
+        <select id="select-client"></select>
+    </div>
+    <button onclick="guardarInfoMensaje()">Guardar Mensaje</button>
+
+<!--Tabla Reservaciones-->
+<h2>Reservaciones</h2>
+    <div id="resultadoReservaciones"></div>
+    <script type="text/javascript">
+        window.onload = autoInicioReservacion();
+    </script>
+    <div>
+        <input type="date" id="startDate" placeholder="startDate">
+        <input type="date" id="devolutionDate" placeholder="devolutionDate">
+        <input type="text" id="status" placeholder="status"> 
+        <select id="select-cabin"></select>
+        <select id="select-client"></select>
+    </div>
+    <button onclick="guardarInfoReservacion()">Guardar Reservación</button>
+
+</body>
+</head>
+</html>
+
+
